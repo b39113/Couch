@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<serviceRecords>
+	<Record>
+		<Title>Shower Replacement</title>
+		<Service Date>2013-11-11</Service Date>
+		<Servicer Name>The Sparks Solution</Servicer Name>
+		<Servicer Phone>1-515-123-1234</Servicer Phone>
+		<Servicer Warranty>false</Servicer Warranty>
+		<Warranty Expires>null</Warranty Expires>
+		<Description>Replaced shower in the master bathroom due to leak in the floor pan</Description>
+	</Record>
+	<Record>
+		<Title>Air Exchanger</title>
+		<Service Date>2014-08-21</Service Date>
+		<Servicer Name>The Filter People</Servicer Name>
+		<Servicer Phone>1-515-234-2345</Servicer Phone>
+		<Servicer Warranty>false</Servicer Warranty>
+		<Warranty Expires>null</Warranty Expires>
+		<Description>Replaced filter in air exchanger</Description>
+	</Record>
+	<Record>
+		<Title>AC A Coil</title>
+		<Service Date>2013-07-11</Service Date>
+		<Servicer Name>HVAC Pros</Servicer Name>
+		<Servicer Phone>1-515-345-3456</Servicer Phone>
+		<Servicer Warranty>true</Servicer Warranty>
+		<Warranty Expires>2013-11-11</Warranty Expires>
+		<Description>A coil needed to be replaced in the AC unit</Description>
+	</Record>
+	<Record>
+		<Title>Deck Floor Replacement</title>
+		<Service Date>2013-06-09</Service Date>
+		<Servicer Name>The Deck Doctors</Servicer Name>
+		<Servicer Phone>1-515-456-4567</Servicer Phone>
+		<Servicer Warranty>true</Servicer Warranty>
+		<Warranty Expires>2013-11-11</Warranty Expires>
+		<Description>Replaced floor boards on deck</Description>
+	</Record>
+	<Record>
+		<Title>Electrical Master</title>
+		<Service Date>2012-12-24</Service Date>
+		<Servicer Name>Matt Humphrey</Servicer Name>
+		<Servicer Phone>1-515-567-5678</Servicer Phone>
+		<Servicer Warranty>false</Servicer Warranty>
+		<Warranty Expires>null</Warranty Expires>
+		<Description>Added new outlet in master bathroom</Description>
+	</Record>
+</serviceRecords>

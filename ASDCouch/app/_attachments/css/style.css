@@ -1,0 +1,19 @@
+/*
+Boyd Tiffin
+1312 - ASDI
+*/
+
+.center{
+	text-align: center;
+	font-weight: bold;
+}
+
+.hint{
+	font-size: small;
+	color: gray;
+	padding-left: 10px;
+}
+
+#addServiceFormErrorsLink{
+	display: none;
+}
