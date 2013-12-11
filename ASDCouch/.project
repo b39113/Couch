@@ -9,41 +9,4 @@
 	<natures>
 		<nature>com.pittypanda.plugins.couch.nature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>app/_attachments/img/cta.gif</name>
-			<type>1</type>
-			<location>/Users/Boyd/Dropbox/School Files/Full Sail/11 - ASDI/GIT/ASDI/Week1/img/cta.gif</location>
-		</link>
-		<link>
-			<name>app/_attachments/css/images/ajax-loader.gif</name>
-			<type>1</type>
-			<location>/Users/Boyd/Dropbox/School Files/Full Sail/11 - ASDI/GIT/ASDI/Week1/css/images/ajax-loader.gif</location>
-		</link>
-		<link>
-			<name>app/_attachments/css/images/cta.gif</name>
-			<type>1</type>
-			<location>/Users/Boyd/Dropbox/School Files/Full Sail/11 - ASDI/GIT/ASDI/Week1/img/cta.gif</location>
-		</link>
-		<link>
-			<name>app/_attachments/css/images/icons-18-black.png</name>
-			<type>1</type>
-			<location>/Users/Boyd/Dropbox/School Files/Full Sail/11 - ASDI/GIT/ASDI/Week1/css/images/icons-18-black.png</location>
-		</link>
-		<link>
-			<name>app/_attachments/css/images/icons-18-white.png</name>
-			<type>1</type>
-			<location>/Users/Boyd/Dropbox/School Files/Full Sail/11 - ASDI/GIT/ASDI/Week1/css/images/icons-18-white.png</location>
-		</link>
-		<link>
-			<name>app/_attachments/css/images/icons-36-black.png</name>
-			<type>1</type>
-			<location>/Users/Boyd/Dropbox/School Files/Full Sail/11 - ASDI/GIT/ASDI/Week1/css/images/icons-36-black.png</location>
-		</link>
-		<link>
-			<name>app/_attachments/css/images/icons-36-white.png</name>
-			<type>1</type>
-			<location>/Users/Boyd/Dropbox/School Files/Full Sail/11 - ASDI/GIT/ASDI/Week1/css/images/icons-36-white.png</location>
-		</link>
-	</linkedResources>
 </projectDescription>

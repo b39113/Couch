@@ -90,6 +90,7 @@ $(function(){
 					}
 					$('<br />')
 					.appendTo("#allRecordsParent");
+					$("#allRecordsParent").listview('refresh');
 				}
 			});
 		});
