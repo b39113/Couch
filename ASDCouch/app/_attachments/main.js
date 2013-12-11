@@ -61,6 +61,16 @@ $(function(){
 	
 // VIEW ALL RECORDS PAGE
 	$('#viewAll').on('pageinit', function(){
+		// Display items that are currently in the couch database
+		console.log("In the view all page");
+		
+		
+		
+		
+		
+		
+		
+/*		This is the old way when it pulled from local storage
 		for(var i=0, j=localStorage.length; i<j; i++){
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
@@ -74,8 +84,8 @@ $(function(){
 			editDeleteLinks(key)
 			$('<br /><br />')
 				.appendTo("#allRecordsParent");
-
 		}
+*/
 	// AJAX Requests Start Here
 		// JSON FILE
 		$("#loadJSON").on("click", function(){
