@@ -62,10 +62,13 @@ $(function(){
 // VIEW ALL RECORDS PAGE
 	$('#viewAll').on('pageinit', function(){
 		// Display items that are currently in the couch database
+		// Add a header line for the category first
 		$.ajax({
-			"url": "_view/servicerecords",
+			"url": "_view/mechanical",
 			"dataType": "json",
 			"success": function(data){
+				$('<li data-role="list-divider">Mechanical</li>')
+					.appendTo('#allRecordsParent');
 				$.each(data.rows, function(index, sr){
 					var id = sr.id;
 					var srTitle = sr.value.Title;
@@ -91,12 +94,37 @@ $(function(){
 				$('#allRecordsParent').listview('refresh');
 			}
 		});
-		
-		
-		
-		
-		
-		
+		$.ajax({
+			"url": "_view/bathroom",
+			"dataType": "json",
+			"success": function(data){
+				$('<li data-role="list-divider">Bathroom</li>')
+					.appendTo('#allRecordsParent');
+				$.each(data.rows, function(index, sr){
+					var id = sr.id;
+					var srTitle = sr.value.Title;
+					var srDate = sr.value.srDate;
+					var srDesc = sr.value.srDesc;
+					var srExpires = sr.value.srExpires;
+					var srName = sr.value.srName;
+					var srPhone = sr.value.srPhone;
+					var srWarranty = sr.value.srWarranty;
+					$('#allRecordsParent')
+						.append(
+							$('<li>')
+								.append(
+									$('<a>')
+										.attr({
+											href: "#",
+											id: id
+										})
+										.text(srTitle)
+								)
+						);
+				});
+				$('#allRecordsParent').listview('refresh');
+			}
+		});
 		
 /*		This is the old way when it pulled from local storage
 		for(var i=0, j=localStorage.length; i<j; i++){

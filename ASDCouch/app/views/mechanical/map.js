@@ -1,6 +1,7 @@
 function(doc){
-	if(doc.type === "sr"){
+	if(doc.type === "mechanical"){
 		emit(doc._id, {
+			"Category": doc.type,
 			"Title": doc.Title,
 			"srDate": doc.srDate,
 			"srName": doc.srName,
