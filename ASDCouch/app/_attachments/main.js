@@ -62,7 +62,35 @@ $(function(){
 // VIEW ALL RECORDS PAGE
 	$('#viewAll').on('pageinit', function(){
 		// Display items that are currently in the couch database
-		console.log("In the view all page");
+		$.ajax({
+			"url": "_view/servicerecords",
+			"dataType": "json",
+			"success": function(data){
+				$.each(data.rows, function(index, sr){
+					var id = sr.id;
+					var srTitle = sr.value.Title;
+					var srDate = sr.value.srDate;
+					var srDesc = sr.value.srDesc;
+					var srExpires = sr.value.srExpires;
+					var srName = sr.value.srName;
+					var srPhone = sr.value.srPhone;
+					var srWarranty = sr.value.srWarranty;
+					$('#allRecordsParent')
+						.append(
+							$('<li>')
+								.append(
+									$('<a>')
+										.attr({
+											href: "#",
+											id: id
+										})
+										.text(srTitle)
+								)
+						);
+				});
+				$('#allRecordsParent').listview('refresh');
+			}
+		});
 		
 		
 		
@@ -76,7 +104,6 @@ $(function(){
 			var value = localStorage.getItem(key);
 			// String to Obj
 			var obj = JSON.parse(value);
-/* 			getImage(createSubList, obj.status[1]); */
 			for(var d in obj){
 				$('<li>' + obj[d][0]+" " +obj[d][1] + '</li>')
 					.appendTo("#allRecordsParent");
