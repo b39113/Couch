@@ -184,9 +184,11 @@ $(document).on('pageinit', '#additem', function(){
 			    $.couch.db("development").saveDoc(record, {
 			        success: function(data) {
 			            alert("New Record Saved");
+			            window.location = "index.html#viewAll";
 			        },
 			        error: function(status) {
 			            alert("Record not Saved");
+			            window.location = "index.html#viewAll";
 			        }
 			    });
 		    }
@@ -199,28 +201,27 @@ $(document).on('pageinit', '#edititem', function(){
 	newId = test["id"];
 	$.couch.db("development").openDoc(newId, {
 		success: function(data){
-			var parse = JSON.parse(data);
 			//Get the item specific data from Couch
-			var id = parse._id;
-			var rev = parse._rev;
-			var editTitle = parse.Title;
-			var editDate = parse.srDate;
-			var editDesc = parse.srDesc;
-			var editExpires = parse.srExpires;
-			var editName = parse.srName;
-			var editPhone = parse.srPhone;
-			var editWarranty = parse.srWarranty;
-			var editType = parse.type;
+			var id = data._id;
+			var rev = data._rev;
+			var editTitle = data.Title;
+			var editDate = data.srDate;
+			var editDesc = data.srDesc;
+			var editExpires = data.srExpires;
+			var editName = data.srName;
+			var editPhone = data.srPhone;
+			var editWarranty = data.srWarranty;
+			var editType = data.type;
 			// Set the values of the fields on the page
-			$("#scTitle").val(editTitle);
-    		$('#scCompany').val(editName);
-    		$('#scDate').val(editDate);
-    		$('#scWarranty').val(editWarranty);
-    		$('#scPhone').val(editPhone);
-    		$('#scWarDate').val(editExpires);
-    		$('#scDesc').val(editDesc);
-    		$('#type').val(editType);
-    		alert(editType);
+			$("#edTitle").val(editTitle);
+    		$('#edCompany').val(editName);
+    		$('#edDate').val(editDate);
+    		$('#edWarranty').val(editWarranty);
+    		$('#edPhone').val(editPhone);
+    		$('#edWarDate').val(editExpires);
+    		$('#edDesc').val(editDesc);
+    		$('#edtype').val(editType);
+    		$('#edRev').val(rev);
 		}
 	});
 	//any other code needed for addItem page goes here	
@@ -248,24 +249,26 @@ $(document).on('pageinit', '#edititem', function(){
 			    	warr = false;
 			    };
 			    var record = {
-			    		_id: id,
-			    		_rev: rev,
-			    		Title: $('#scTitle').val(),
-			    		srName: $('#scCompany').val(),
-			    		srDate: $('#scDate').val(),
+			    		_id: newId,
+			    		_rev: $('#edRev').val(),
+			    		Title: $('#edTitle').val(),
+			    		srName: $('#edCompany').val(),
+			    		srDate: $('#edDate').val(),
 			    		srWarranty: warr,
-			    		srPhone: $('#scPhone').val(),
-			    		srExpires: $('#scWarDate').val(),
-			    		srDesc: $('#scDesc').val(),
-			    		type: $('#type').val()
+			    		srPhone: $('#edPhone').val(),
+			    		srExpires: $('#edWarDate').val(),
+			    		srDesc: $('#edDesc').val(),
+			    		type: $('#edtype').val()
 			    };
 			    // Add item to DB
 			    $.couch.db("development").saveDoc(record, {
 			        success: function(data) {
-			            alert("New Record Saved");
+			            alert("Record Updated");
+			            window.location = "index.html#viewAll";
 			        },
 			        error: function(status) {
-			            alert("Record not Saved");
+			            alert("Record not Updated");
+			            window.location = "index.html#viewAll";
 			        }
 			    });
 		    }

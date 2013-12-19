@@ -36,53 +36,53 @@
 						<form action="#" id="editService" method="post">
 							<p>* Required</p>
 							<section data-role="fieldcontain">
-								<label for="scTitle">Title:</label>
-								<input data-mini="true" value="" type="text" name="scTitle" id="scTitle" placeholder="* Title" data-clear-btn="true" required />
+								<label for="edTitle">Title:</label>
+								<input data-mini="true" value="" type="text" name="edTitle" id="edTitle" placeholder="* Title" data-clear-btn="true" required />
 								<span class="hint">Enter brief title of work completed</span>
 							</section>
 							<section data-role="fieldcontain">
-								<label for="scDate">Date of Service:</label>
-								<input data-mini="true" type="date" name="scDate" id="scDate" data-clear-btn="true" required/>
+								<label for="edDate">Date of Service:</label>
+								<input data-mini="true" type="date" name="edDate" id="edDate" data-clear-btn="true" required/>
 								<span class="hint">Enter date work was completed</span>
 							</section>
 							<section data-role="fieldcontain">
-								<label for="scCompany">Servicer Name:</label>
-								<input data-mini="true" type="text" name="scCompany" id="scCompany" placeholder="Servicer Company" data-clear-btn="true"/>
+								<label for="edCompany">Servicer Name:</label>
+								<input data-mini="true" type="text" name="edCompany" id="edCompany" placeholder="Servicer Company" data-clear-btn="true"/>
 								<span class="hint">Enter name of service company</span>
 							</section>
 							<section data-role="fieldcontain">
-								<label for="scPhone">Phone Number:</label>
-								<input data-mini="true" type="tel" name="scPhone" id="scPhone" placeholder="Servicer Phone" data-clear-btn="true"/>
+								<label for="edPhone">Phone Number:</label>
+								<input data-mini="true" type="tel" name="edPhone" id="edPhone" placeholder="Servicer Phone" data-clear-btn="true"/>
 								<span class="hint">Enter service company phone number</span>
 							</section>
 							<section data-role="fieldcontain">
-								<label class="center" for="scWarranty">Warranty Information</label>
+								<label class="center" for="edWarranty">Warranty Information</label>
 								<section class="ui-grid-a">
 									<div class="ui-block-a">
 										<h5>Warranty?</h5>
-										<select data-mini="true" name="scWarranty" id="scWarranty" data-role="slider">
+										<select data-mini="true" name="edWarranty" id="edWarranty" data-role="slider">
 										    <option value=false>No</option>
 										    <option value=true>Yes</option>
 										</select>
 									</div>
 									<div class="ui-block-b">
 										<h5>Expires?</h5>
-										<input data-mini="true" type="date" name="scWarDate" id="scWarDate" data-clear-btn="true" />
+										<input data-mini="true" type="date" name="edWarDate" id="edWarDate" data-clear-btn="true" />
 									</div>
 								</section>
 							</section>
 							<section data-role="fieldcontain">
-							<label for="scDesc">Description:</label>
-								<textarea data-mini="true" cols="40" rows="8" name="scDesc" id="scDesc" placeholder="Full details..." required></textarea>
+							<label for="edDesc">Description:</label>
+								<textarea data-mini="true" cols="40" rows="8" name="edDesc" id="edDesc" placeholder="Full details..." required></textarea>
 								<span class="hint">Enter full description of work completed</span>
-								<input type="hidden" value="" name="hiddenKey" id="hiddenKey" />
+								<input type="hidden" value="" name="edRev" id="edRev" />
 							</section>
 							<h5>Category:</h5>
-								<select name="type" id="type" data-role="slider">
+								<select name="edtype" id="edtype" data-role="slider">
 								    <option value="bathroom">Bathroom</option>
 								    <option value="mechanical">Mechanical</option>
 								</select>
-							<input id="subService" type="submit" value="Add Record" data-icon="check" />
+							<input id="edService" type="submit" value="Edit Record" data-icon="check" />
 						</form>
 						<a href="#addServiceFormErrors" id="addServiceFormErrorsLink" data-rel="dialog" data-transition="pop">Open Errors</a>
 				    </div>
