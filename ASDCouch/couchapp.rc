@@ -4,7 +4,7 @@
       "db": "http://127.0.0.1:5984/development"
     },
         "cloudant": {
-      "db": "https://mokono:m0ney101@mokono.cloudant.com/asdproject1312"
+      "db": "https://mokono:m0ney101@mokono.cloudant.com/asdproject"
     }
   }
 }

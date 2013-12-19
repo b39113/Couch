@@ -22,6 +22,12 @@
 		
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 		<script src="modernizr.custom.min.js"></script>
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src="jquery.mobile-1.3.2.min.js"></script>
+		<script src="jqm-inlinetabs.min.js"></script>
+		<script src="jquery.validate.min.js"></script>
+		<script src="jquery.couch.js"></script>
+		
 	
 	</head>
 	<body>
@@ -62,9 +68,7 @@
 				</nav>
 			</header>
 			<section id="content-section" data-role="content">
-				<a href="#" id="loadXML" data-role="button">Display XML File</a>
-				<a href="#" id="loadJSON" data-role="button">Display JSON File</a>
-				<ul data-role="listview" data-split-icon="gear" data-inset="true" id="allRecordsParent">
+				<ul data-role="listview" data-inset="true" id="allRecordsParent">
 					
 				</ul>
 			</section>
@@ -122,8 +126,8 @@
 									<div class="ui-block-a">
 										<h5>Warranty?</h5>
 										<select data-mini="true" name="scWarranty" id="scWarranty" data-role="slider">
-										    <option value="No">No</option>
-										    <option value="Yes">Yes</option>
+										    <option value=false>No</option>
+										    <option value=true>Yes</option>
 										</select>
 									</div>
 									<div class="ui-block-b">
@@ -138,6 +142,11 @@
 								<span class="hint">Enter full description of work completed</span>
 								<input type="hidden" value="" name="hiddenKey" id="hiddenKey" />
 							</section>
+							<h5>Category:</h5>
+								<select name="type" id="type" data-role="slider">
+								    <option value="bathroom">Bathroom</option>
+								    <option value="mechanical">Mechanical</option>
+								</select>
 							<input id="subService" type="submit" value="Add Record" data-icon="check" />
 						</form>
 						<a href="#addServiceFormErrors" id="addServiceFormErrorsLink" data-rel="dialog" data-transition="pop">Open Errors</a>
@@ -253,11 +262,6 @@
 		</section>
 
 <!-- JavaScript under here -->
-		<!-- Google Hosted CDN for jquery -->
-		<script src="jquery-1.10.2.min.js"></script>
-		<script src="jquery.mobile-1.3.2.min.js"></script>
-		<script src="jqm-inlinetabs.min.js"></script>
-		<script src="jquery.validate.min.js"></script>
 		<!-- Site Files ALWAYS last! -->
 		<script src="main.js"></script>
 
